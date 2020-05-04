@@ -3,9 +3,8 @@ require "nokogiri"
 require_relative "recipe"
 
 class ScrapeBbcGoodFoodService # or ScrapeMarmitonService
-  def initialize(keyword, difficulty)
+  def initialize(keyword)
     @keyword = keyword
-    @difficulty = difficulty
   end
 
   def call
@@ -19,8 +18,6 @@ class ScrapeBbcGoodFoodService # or ScrapeMarmitonService
       description = element.search('.teaser-item__text-content').text.strip
       prep_time = element.search('.teaser-item__info-item--total-time').text.strip
       difficulty = element.search('.teaser-item__info-item--skill-level').text.strip
-
-      next unless difficulty == @difficulty
 
       recipe = Recipe.new(
         name: name,
