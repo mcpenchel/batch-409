@@ -1,0 +1,17 @@
+<h1>Botafogo</h1>
+<h2>The best football club in the galaxy</h2>
+<h3>bringing you all kinds of food!!</h3>
+
+<h4>
+  <a href="/new_restaurant">Create a new restaurant</a>
+</h4>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <a href="/restaurant/<%= restaurant.id %>">
+        <%= "#{restaurant.name} at #{restaurant.address}" %></li>
+      </a>
+    </li>
+  <% end %>
+</ul>
