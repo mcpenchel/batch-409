@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HTTP & Ajax</title>
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+      body {
+        color: white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="margin-top: 15vh; text-align: center; font: normal 24px monospace;">Recap</h2>
+
+    <div class="text-center">
+      <button id="click-me" class="btn btn-info" style="color: black;">Ahoy!</button>
+    </div>
+
+    <h2 style="margin-top: 15vh; text-align: center; font: normal 24px monospace;">AJAX POST requests</h2>
+
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
+      <input id="search" type="text" class="form-control" style="width: 200px;" placeholder="Let's go to Algolia...">
+    </div>
+
+    <ul id="places-results" class="list-inline"></ul>
+
+    <h2 style="margin-top: 15vh; text-align: center; font: normal 24px monospace;">AJAX GET requests</h2>
+
+    <form id="search-movies" class="form-inline">
+      <input id="keyword" type="text" class="form-control ml-auto mr-2" placeholder="Find movies">
+      <input type="submit" class="btn btn-primary mr-auto ml-2" value="Search">
+    </form>
+
+    <div class="container text-center">
+      <ul id="results" class="list-inline"></ul>
+    </div>
+
+    <!-- Add some HTML in here -->
+
+    <script src="main.js"></script>
+  </body>
+</html>
