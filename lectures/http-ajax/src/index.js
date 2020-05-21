@@ -1,10 +1,7 @@
-// AJAX GET request
+// AJAX GET request is fired when submitting the form
 
 const results = document.getElementById("results");
-
-// AJAX GET request through click on the form's submit btn
-
-const form = document.querySelector('#search-movies');
+const form    = document.getElementById('search-movies');
 
 const insertMovies = (data) => {
   if (data.Search) {
