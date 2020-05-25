@@ -1,0 +1,13 @@
+<h2>Contact us, man!!</h2>
+<h3>We're an ambitious team.</h3>
+
+<form action="/contact" method="get">
+  <input type="text" name="member" placeholder="Who are you looking for?" value="<%= params[:member] %>">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @employees.each do |employee| %>
+    <li><%= employee.upcase %></li>
+  <% end %>
+</ul>
