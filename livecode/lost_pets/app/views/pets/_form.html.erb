@@ -1,0 +1,10 @@
+<!-- partial -->
+
+<%= simple_form_for pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :species, collection: Pet::SPECIES %>
+  <%= f.input :gender %>
+  <%= f.input :rescued_at %>
+
+  <%= f.submit submit_msg, class: 'btn btn-primary' %>
+<% end %>

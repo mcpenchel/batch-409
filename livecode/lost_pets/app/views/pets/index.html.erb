@@ -1,0 +1,13 @@
+<!-- name + species -->
+
+<h1>Pets summary</h1>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <p><%= link_to "#{pet.name} #{pet.species}", pet_path(pet) %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Rescued a pet?", new_pet_path, class: 'btn btn-secondary' %>
