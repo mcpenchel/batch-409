@@ -1,0 +1,8 @@
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      <%= link_to "Delete", restaurant_path(restaurant), method: 'DELETE', data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
